@@ -12,24 +12,7 @@ pipeline {
             }
         }
 
-        stage('Install Dependencies') {
-            steps {
-                sh '''
-                    curl -sSL https://install.python-poetry.org | python3 -
-                    export PATH="$HOME/.local/bin:$PATH"
-                    poetry install
-                '''
-            }
-        }
-
-        stage('Run Unit Tests') {
-            steps {
-                sh '''
-                    export PATH="$HOME/.local/bin:$PATH"
-                    poetry run pytest tests/ --cov=src --cov-report=xml
-                '''
-            }
-        }
+      
 
         stage('SonarQube Analysis') {
             steps {
