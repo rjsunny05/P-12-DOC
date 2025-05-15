@@ -20,7 +20,7 @@ pipeline {
                     sh """
                         ${SONAR_SCANNER_HOME}/bin/sonar-scanner \
                         -Dsonar.projectKey=attendance-api \
-                        -Dsonar.sources=src \
+                        -Dsonar.sources=. \
                         -Dsonar.host.url=http://107.20.119.99:9000 \
                         -Dsonar.login=sqa_ed8c672dc4770f06e66c07b5699072ceae029258 \
                         -Dsonar.python.coverage.reportPaths=coverage.xml
