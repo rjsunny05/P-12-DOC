@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/OT-MICROSERVICES/attendance-api.git'
+                git branch: 'main', url: 'https://github.com/OT-MICROSERVICES/salary-api.git'
             }
         }
 
