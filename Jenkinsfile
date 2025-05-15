@@ -27,10 +27,11 @@ pipeline {
             steps {
                 sh '''
                     export PATH="$HOME/.local/bin:$PATH"
-                    poetry run pytest tests/ --cov=src --cov-report=xml
+                    poetry run pytest --cov=./ --cov-report=xml
                 '''
             }
         }
+
 
       
 
